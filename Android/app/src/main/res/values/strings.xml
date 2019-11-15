@@ -1,0 +1,73 @@
+<resources>
+    <string name="SplashTitle">BEFORE YOU USE</string>
+    <string name="SplashButton">Start App</string>
+    <string name="SafetyMessageMain">This application is intended to be used with a
+        drone device code named Cerberus Drone. Safety precautions must be taken
+        at all time to prevent any serious injuries. It\'s recommended to check the device
+        before take off.
+    </string>
+    <string name="SafetyMessageSub1">Do not fly indoor! Open areas and areas with minimum
+    signal interference are the best options.</string>
+    <string name="SafetyMessageSub2">Do not fly the device in a rainy conditions. Make
+        sure the weather is suitable before take-off.</string>
+    <string name="SafetyMessageSub3">Users should avoid flying the device over groups of
+        people, stadiums and sporting events, and stay away from emergency response teams;
+        additionally, flying should not exceed 400 feet while keeping the device within the
+        pilot's line of sight.</string>
+    <string name="SafetyMessageSub4">Make sure a fully charged batteries are used. Avoid flying
+        with minimum battery capacity.</string>
+    <string name="SafetyMessageSub5">This project was made by <u><i>Sami Khaled Nofal</i></u> as a part of the graduation project
+        from the University of Jordan</string>
+
+    <string name="DeviceMsg">Please connect to a Cerberus device first.</string>
+    <string name="SettingsTabSwitch"><u>Go to settings</u></string>
+
+    <string name="app_name">Cerberus Drone</string>
+    <string name="app_name_title">CERBERUS DRONE</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="Utilities">Utilities Settings</string>
+    <string name="GPS">Global Positioning System</string>
+    <string name="SafetyMode">Safety Mode</string>
+    <string name="Sensors">Sensors</string>
+    <string name="NightMode">Night Mode</string>
+    <string name="Propellers">Propellers</string>
+    <string name="Altitude">Max Altitude</string>
+    <string name="Battery">Battery Monitor</string>
+    <string name="BatteryLevel">Battery Level</string>
+    <string name="BatLowPower">Low Power</string>
+    <string name="LowPower_Summary">Low power mode disables
+        the drone gps, sensors, and other miscellaneous processes
+        that may reduce the battery life</string>
+    <string name="Controller">Controller Beta</string>
+    <string name="ControllerBtn">Launch Controller Beta</string>
+    <string name="MiscTxt">Extras</string>
+    <string name="SendBLTxt">Send</string>
+
+    <string name="ControllerTitle">Controller Beta</string>
+
+    <string name="RXTitle">Received Data</string>
+    <string name="GraphTitle">Data Plotter</string>
+    <string name="GPSTitle">GPS</string>
+    <string name="GPS_State">GPS State</string>
+    <string name="GraphMsg">Enable graph to display the data</string>
+    <string name="GraphSwitch">Toggle Data</string>
+    <string name="MapTitle">Map</string>
+
+    <string name="Bluetooth">Bluetooth</string>
+    <string name="ToggleBluetooth">Toggle Bluetooth</string>
+    <string name="BL_Discovery_Btn">Enable Discovery</string>
+    <string name="BL_Unpaired_Btn">Find Devices</string>
+    <string name="BL_StartCon_Btn">Start Connection</string>
+    <string name="BL_CancelCon_Btn">Stop Connection</string>
+    <string name="BL_Text_Hint">Enter text here…</string>
+    <string name="BL_Send_Btn">Send</string>
+    <string name="BL_lvMsg">Select a device to connect to:</string>
+    <string name="tvDeviceNameTitle">Device Name: </string>
+    <string name="tvDeviceAddressTitle">Device Address: </string>
+    <string name="tvDeviceRSSITitle">Device RSSI: </string>
+    <string name="LocationServices">Location Services</string>
+    <string name="ToggleLocationServices">Toggle Location</string>
+
+    <string name="Google_Maps_API_Key">AIzaSyBWNBQ8_z9Fdv0fEXk-nSlDh2Z0kaDAA68</string>
+</resources>

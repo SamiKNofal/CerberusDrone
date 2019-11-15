@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Black</item>
+        <item name="colorPrimaryDark">@color/Black</item>
+        <item name="colorAccent">@color/BloodRed</item>
+        <item name="android:windowBackground">@color/Black</item>
+        <item name="android:alertDialogTheme">@style/ProgDialigUtilitiesTheme</item>
+    </style>
+
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+
+
+    <style name="ProgDialigStyle" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:alertDialogStyle">@style/ProgDialogSubStyle</item>
+        <item name="android:background">@color/Black</item>
+        <item name="android:windowMinWidthMajor">95%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+    </style>
+
+    <style name="ProgDialogSubStyle">
+        <item name="android:bottomBright">@color/Black</item>
+        <item name="android:bottomDark">@color/Black</item>
+        <item name="android:bottomMedium">@color/Black</item>
+        <item name="android:centerBright">@color/Black</item>
+        <item name="android:centerDark">@color/Black</item>
+        <item name="android:centerMedium">@color/Black</item>
+        <item name="android:fullBright">@color/Black</item>
+        <item name="android:fullDark">@color/Black</item>
+        <item name="android:topBright">@color/Black</item>
+        <item name="android:topDark">@color/Black</item>
+    </style>
+
+
+
+    <style name="ProgDialigUtilitiesTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogNegBtnStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogNegBtnStyle</item>
+        <item name="android:colorPrimary">@color/Black</item>
+        <item name="android:colorAccent">@color/SkyBlue</item>
+    </style>
+
+    <style name="DialogNegBtnStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="DialogPosBtnStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+</resources>

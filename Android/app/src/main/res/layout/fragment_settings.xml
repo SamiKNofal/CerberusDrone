@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Scrollable content -->
+
+        <ScrollView
+            android:id="@+id/ScrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="InefficientWeight">
+
+                    <TextView
+                        android:id="@+id/Bluetooth_Txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:padding="15dp"
+                        android:text="@string/Bluetooth"
+                        android:background="@drawable/gradient_bg1"
+                        android:textColor="@color/White"
+                        android:textSize="20sp" />
+
+                    <TabWidget
+                        android:id="@+id/Bluetooth_Tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Black"
+                        android:layout_below="@+id/Bluetooth_Txt">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_bluetooth"
+                                tools:ignore="ContentDescription" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <Switch
+                                android:id="@+id/Bluetooth_Switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/Black"
+                                android:padding="15dp"
+                                android:text="@string/ToggleBluetooth"
+                                android:textColor="@color/White"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </TabWidget>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/Bluetooth_Tab"
+                        android:id="@+id/Bluetooth_SubLayout"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/View_Bluetooth_Discovery"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/Black"
+                                android:paddingTop="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="7.5dp"
+                                android:paddingLeft="15dp">
+
+                                <Button
+                                    android:id="@+id/Bluetooth_Discovery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/gradient_bg9"
+                                    android:padding="15dp"
+                                    android:text="@string/BL_Discovery_Btn"
+                                    android:textColor="@color/White"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/View_Bluetooth_FindDevices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/Black"
+                                android:paddingTop="7.5dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="15dp"
+                                android:layout_below="@+id/View_Bluetooth_Discovery">
+
+                                <Button
+                                    android:id="@+id/Bluetooth_FindDevices"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/gradient_bg9"
+                                    android:padding="15dp"
+                                    android:text="@string/BL_Unpaired_Btn"
+                                    android:textColor="@color/White"
+                                    android:textSize="18sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/View_Bluetooth_CancelCon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/Black"
+                                android:paddingTop="0dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="15dp"
+                                android:layout_below="@+id/View_Bluetooth_FindDevices">
+
+                                <Button
+                                    android:id="@+id/BL_CancelCon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/gradient_bg9"
+                                    android:padding="15dp"
+                                    android:text="@string/BL_CancelCon_Btn"
+                                    android:textColor="@color/White"
+                                    android:textSize="18sp"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/View_lvBLDevices"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/View_Bluetooth_CancelCon">
+
+                                <ListView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:id="@+id/lvBLDevices"
+                                    tools:ignore="NestedScrolling"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    tools:context=".SplashActivity"
+    android:background="@color/Black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SplashLogLayout"
+        android:visibility="visible"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SplashLogLayoutIcon">
+
+            <ImageView
+                android:id="@+id/SplashLogo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/cerberus_logo"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SplashLogLayoutIcon"
+            android:id="@+id/SplashLogLayoutTitle"
+            android:textColor="@color/White"
+            android:textSize="25sp"
+            android:padding="18dp"
+            android:textAlignment="center"
+            android:text="CERBERUS"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/SplashContLayout"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:gravity="center|right"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/polygon_bg"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:background="@color/Black"
+            android:text="@string/SplashTitle"
+            android:id="@+id/SplashTitle"
+            android:elevation="30dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:elevation="30dp"
+            android:id="@+id/BarSep"
+            android:background="@drawable/gradient_bg2"
+            android:layout_below="@+id/SplashTitle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SplashContLayoutLogo"
+            android:elevation="30dp"
+            android:gravity="center"
+            android:padding="40dp"
+            android:layout_below="@+id/BarSep">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cerberus_logo_trans"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:elevation="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SafetyMessageMain"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:layout_margin="20dp"
+                    android:padding="20dp"
+                    android:textAlignment="center"
+                    android:text="@string/SafetyMessageMain"
+                    android:id="@+id/SafetyMessageMainTxt"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="50dp"
+            android:gravity="bottom"
+            android:id="@+id/SplashBtnLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/SplashSliderBullets"
+                android:layout_above="@+id/SplashButton"
+                android:padding="15dp">
+
+                <TabWidget
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_active"
+                        android:id="@+id/Bullet_1"/>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_inactive"
+                        android:id="@+id/Bullet_2"/>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_inactive"
+                        android:id="@+id/Bullet_3"/>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_inactive"
+                        android:id="@+id/Bullet_4"/>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_inactive"
+                        android:id="@+id/Bullet_5"/>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/bullet_inactive"
+                        android:id="@+id/Bullet_6"/>
+
+                </TabWidget>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/SplashButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="31dp"
+                android:background="@drawable/gradient_bg9"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/SplashButton"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

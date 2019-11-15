@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ControlActivity"
+    android:background="@color/Black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/JoysticksLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ConHeaderLayout">
+
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ConHeader_Tabs">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ExitBtn"
+                        android:background="@drawable/ic_return"
+                        android:layout_margin="10dp"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ControlTitle"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:text="@string/ControllerTitle"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3">
+
+                </RelativeLayout>
+
+            </TabWidget>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/ConBarSep"
+            android:background="@drawable/gradient_bg2"
+            android:layout_below="@+id/ConHeaderLayout"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/JoysticksDataLayout"
+            android:layout_below="@+id/ConBarSep">
+
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/JoysticksData1"
+                        android:textAlignment="center"
+                        android:padding="15dp"
+                        android:background="@color/Black"
+                        android:text=""
+                        android:textColor="@color/White"
+                        android:textSize="20sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/JoysticksData2"
+                        android:textAlignment="center"
+                        android:padding="15dp"
+                        android:background="@color/Black"
+                        android:text=""
+                        android:textColor="@color/White"
+                        android:textSize="20sp"/>
+
+                </RelativeLayout>
+
+
+
+
+            </TabWidget>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/JoysticksTab">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <io.github.controlwear.virtual.joystick.android.JoystickView
+                            xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/Joystick1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            custom:JV_buttonColor="@color/DarkGray"
+                            custom:JV_buttonSizeRatio="30%"
+                            custom:JV_borderColor="@color/Carbon"
+                            custom:JV_backgroundColor="@color/Black"
+                            custom:JV_borderWidth="2dp"
+                            custom:JV_fixedCenter="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <io.github.controlwear.virtual.joystick.android.JoystickView
+                            xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/Joystick2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            custom:JV_buttonColor="@color/DarkGray"
+                            custom:JV_buttonSizeRatio="30%"
+                            custom:JV_borderColor="@color/Carbon"
+                            custom:JV_backgroundColor="@color/Black"
+                            custom:JV_borderWidth="2dp"
+                            custom:JV_fixedCenter="false"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </TabWidget>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:id="@+id/FragDataLayoutCont">
+
+        <ScrollView
+            android:id="@+id/ScrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="10dp">
+
+                <TextView
+                    android:id="@+id/GraphTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="15dp"
+                    android:text="@string/GraphTitle"
+                    android:background="@drawable/gradient_bg1"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+                <TabWidget
+                    android:id="@+id/GraphSwitch_Tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Black"
+                    android:layout_below="@+id/GraphTitle">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_graph"
+                            tools:ignore="ContentDescription" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <Switch
+                            android:id="@+id/Graph_Switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/Black"
+                            android:padding="15dp"
+                            android:text="@string/GraphSwitch"
+                            android:textColor="@color/White"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                </TabWidget>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GraphLayout"
+                    android:layout_below="@+id/GraphSwitch_Tab"
+                    android:background="@color/Black">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@color/Black"
+                        android:id="@+id/SubGraphLayout">
+
+                        <com.jjoe64.graphview.GraphView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dip"
+                            android:id="@+id/GraphPlotter"
+                            app:seriesType="line"
+                            app:seriesColor="#ff0000"
+                            android:background="@color/Black" />
+
+                    </RelativeLayout>
+
+                    <TabWidget
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2.5dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_below="@+id/SubGraphLayout">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:id="@+id/GraphBtn1"
+                            tools:ignore="ContentDescription"
+                            android:layout_weight="1"
+                            android:background="@color/DarkGray"
+                            android:src="@drawable/ic_light"/>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:id="@+id/GraphBtn2"
+                            tools:ignore="ContentDescription"
+                            android:layout_weight="1"
+                            android:background="@color/Carbon"
+                            android:src="@drawable/ic_temp"/>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:id="@+id/GraphBtn3"
+                            tools:ignore="ContentDescription"
+                            android:layout_weight="1"
+                            android:background="@color/Carbon"
+                            android:src="@drawable/ic_humidity"/>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="50dip"
+                            android:id="@+id/GraphBtn4"
+                            tools:ignore="ContentDescription"
+                            android:layout_weight="1"
+                            android:background="@color/Carbon"
+                            android:src="@drawable/ic_sensor_misc"/>
+
+                    </TabWidget>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/Black"
+                        android:id="@+id/GraphMsgLayout"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dip"
+                            tools:ignore="UselessLeaf"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/GraphMsg"
+                                android:textAlignment="center"
+                                android:id="@+id/GraphMsg"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="7.5dp"
+                                android:paddingRight="15dp"
+                                android:paddingLeft="15dp"
+                                android:textSize="20sp"
+                                android:textColor="@color/White"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/GPSTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="15dp"
+                    android:layout_below="@id/GraphLayout"
+                    android:text="@string/GPSTitle"
+                    android:background="@drawable/gradient_bg1"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GPSContents"
+                    android:layout_below="@+id/GPSTitle">
+
+                    <TabWidget
+                        android:id="@+id/GPS_State_Tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Black">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_earth"
+                                tools:ignore="ContentDescription" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:padding="15dp"
+                                android:text="@string/GPS_State"
+                                android:textColor="@color/White"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5">
+
+                            <TextView
+                                android:id="@+id/GPS_Fix_State"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:padding="15dp"
+                                android:textAlignment="center"
+                                android:text="Unknown"
+                                android:textColor="@color/Gray"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+
+                    </TabWidget>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/MapTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="15dp"
+                    android:layout_below="@id/GPSContents"
+                    android:text="@string/MapTitle"
+                    android:background="@drawable/gradient_bg1"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MapContents"
+                    android:layout_below="@+id/MapTitle">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MapSheetLayout"
+                        android:visibility="visible">
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:id="@+id/GoogleMap"
+                            tools:context=".FragmentData"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:elevation="1dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="1dp"
+                            android:background="@drawable/map_src_bg"
+                            android:id="@+id/MapSrcLayout">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:id="@+id/ic_search"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_search"
+                                tools:ignore="ContentDescription"
+                                android:elevation="1dp"/>
+
+                            <AutoCompleteTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@+id/ic_search"
+                                android:layout_centerVertical="true"
+                                android:textSize="15sp"
+                                android:textColor="@color/White"
+                                android:padding="3dp"
+                                android:id="@+id/Map_InputSrc"
+                                android:textColorHint="@color/TransWhite"
+                                android:background="@null"
+                                android:hint="Enter Address, City or Zip Code"
+                                android:imeOptions="actionSearch"
+                                android:elevation="1dp"
+                                />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/MapUtilities"
+                            android:layout_below="@+id/GoogleMap"
+                            android:background="@color/Black"
+                            android:elevation="1dp">
+
+                            <TabWidget
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    tools:ignore="TooDeepLayout">
+
+                                    <ImageButton
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerVertical="true"
+                                        android:id="@+id/Map_FindLocation"
+                                        android:src="@drawable/ic_location"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@null"
+                                        tools:ignore="ContentDescription"
+                                        android:elevation="1dp"/>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <ImageButton
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerVertical="true"
+                                        android:id="@+id/Map_ClearMarkers"
+                                        android:src="@drawable/ic_marker_remove"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@null"
+                                        tools:ignore="ContentDescription"
+                                        android:elevation="1dp"/>
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <ImageButton
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerVertical="true"
+                                        android:id="@+id/Map_Flyover"
+                                        android:src="@drawable/ic_flyover"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@null"
+                                        tools:ignore="ContentDescription"
+                                        android:elevation="1dp"/>
+
+                                </RelativeLayout>
+
+                            </TabWidget>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/MapExtras"
+                            android:layout_below="@+id/MapUtilities"
+                            android:background="@color/Black"
+                            android:elevation="1dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:textColor="@color/White"
+                                android:padding="15dp"
+                                android:textColorHint="@color/TransWhite"
+                                android:hint="Haversine distance calculation..."
+                                android:id="@+id/MapExtraTxt"
+                                android:textSize="20sp"
+                                android:text=""/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/RXTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="15dp"
+                    android:text="@string/RXTitle"
+                    android:layout_below="@+id/MapContents"
+                    android:background="@drawable/gradient_bg1"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:minHeight="60dp"
+                    android:id="@+id/RXData"
+                    android:layout_below="@+id/RXTitle"
+                    android:background="@color/Black"
+                    android:isScrollContainer="true"
+                    android:padding="15dp"
+                    android:textColor="@color/White"
+                    android:hint="Incoming data is displayed here..."
+                    android:textColorHint="@color/TransWhite"
+                    android:textSize="20sp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FragDataLayoutMsg"
+        android:elevation="100dp"
+        android:background="@color/Black"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DataLayoutMsgLogo"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cerberus_logo"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/DeviceMsg"
+                android:id="@+id/FragDataTxtMsg"
+                android:textColor="@color/White"
+                android:paddingTop="15dp"
+                android:paddingBottom="7.5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_below="@+id/DataLayoutMsgLogo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FragDataTxtMsg"
+                android:id="@+id/FragDataTabSwitch"
+                android:text="@string/SettingsTabSwitch"
+                android:textColor="@color/Red"
+                android:paddingTop="7.5dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
